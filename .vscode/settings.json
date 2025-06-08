@@ -1,0 +1,8 @@
+{
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "skipStyle": true,
+            "externalTemplate": true
+        }
+    }
+}

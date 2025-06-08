@@ -1,0 +1,11 @@
+<div class="card animate__animated animate__fadeIn h-100 cursor-pointer">
+    <img
+    [src]="singleProduct().images | productImage" 
+    src="http://localhost:3000/api/files/product/1741111-00-A_0_2000.jpg"
+        class="card-img-top" alt="...">
+    <div class="card-body">
+        <a [routerLink]="['/product',singleProduct().slug]" class="link-offset-2 link-underline link-underline-opacity-0">{{ singleProduct().title }}</a>
+        <p class="card-text text-muted">{{ singleProduct().description | slice: 0:55 }} ...</p>
+
+    </div>
+</div>

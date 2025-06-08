@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+:root {
+  --animate-duration: 2000ms;
+  --animate-delay: 1.8s;
+}
+
+img{
+  height:270px; 
+  object-fit: cover;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row mt-5">
+
+        @if(productResource.hasValue()){
+        <div class="col-4">
+           <app-product-carousel [images] = "productResource.value().images"></app-product-carousel>
+        </div>
+        <div class="col-8">
+            <h3>{{productResource.value().title }}</h3>
+            <hr>
+            <p>{{productResource.value().description}}</p>
+        </div>
+        }
+    </div>
+</div>

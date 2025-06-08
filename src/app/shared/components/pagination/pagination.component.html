@@ -1,0 +1,11 @@
+<nav aria-label="...">
+  <ul class="pagination pagination-md">
+    @for (page of getPagesPagition(); track page) {
+    <li class="page-item" [class.active]="page === pageActive()">
+      <a class="page-link" aria-current="page" (click)="pageActive.set(page)"  [routerLink]="[]" [queryParams]="{pagina:page}">{{page}}</a>
+    </li>
+    }
+
+
+  </ul>
+</nav>

@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="row mt-5">
+        <div class="col-3">
+            <h1 class="fs-3">Todos los productos</h1>
+            <p class="fs-5 font-weight-light text-secondary">Para todos los gustos</p>
+        </div>
+        <div class="col-9 col d-flex align-items-center justify-content-end">
+            <app-pagination [currentPageSignal]="paginationService.currentPage()" [pagesCountSignal]="productsResource.value()?.pages ?? 0"></app-pagination>
+        </div>
+    </div>
+
+
+    <!-- Product card -->
+    <div class="row">
+
+        @for (product of productsResource.value()?.products; track $index) {
+        <div class="col-md-6 col-lg-3 col-xl-3 col-sm-12 mt-1 py-3">
+            <app-product-card [singleProduct]="product"></app-product-card>
+        </div>
+
+        }
+    </div>
+
+</div>
