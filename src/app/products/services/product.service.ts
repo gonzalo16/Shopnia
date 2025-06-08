@@ -20,7 +20,7 @@ export class ProductService {
   private httpClient = inject(HttpClient);
 
  
-  getProducts(options: QueryParams) :Observable<ProductsResponse>{
+  public getProducts(options: QueryParams) :Observable<ProductsResponse>{
     const {limit = 12, offset = 0, gender = ''} = options;
 
     return this.httpClient.get<ProductsResponse>(`${baseUrl}/products`,{
@@ -32,7 +32,7 @@ export class ProductService {
     }).pipe(tap((resp) => console.log(resp)));
   }
 
-  getProductByIdSlug(idSlug:string):Observable<Product>{
+  public getProductByIdSlug(idSlug:string):Observable<Product>{
     return this.httpClient.get<Product>(`${baseUrl}/products/${idSlug}`);
   }
 
